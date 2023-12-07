@@ -1,14 +1,14 @@
 function randomNumber() {
-  return Math.floor(Math.random() * 100);
+  return Math.floor(Math.random(0.5) * 100);
 }
 
-function guessGame(userGuess) {
-  let secretNumber = randomNumber();
+function guessNum(userGuess) {
+  let secretNumber = 50;
   let numberOfGuesses = 0;
 
   function checkGuess(userGuess) {
       if (userGuess === secretNumber) {
-          console.log('Congratulations! You guessed the correct number in ${numberOfGuesses} guesses.');
+          console.log('Congratulations! You guessed the correct');
       } else if (userGuess < secretNumber) {
           console.log('Too low! Try again.');
       } else {
@@ -23,5 +23,6 @@ function guessGame(userGuess) {
       checkGuess(userGuess);
   }
 }
-guessGame(100);
-guessGame(20);
+guessNum(50);
+guessNum(20);
+guessNum(60);
